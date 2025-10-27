@@ -1,0 +1,936 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Daraz CloneAgain",
+    "version": "1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Daraz CloneAgain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Title": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "CurrentPrice": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "OriginalPrice": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Discount": {
+                    "type": "string"
+                  },
+                  "Rating": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Reviews": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Badge": {
+                    "type": "string"
+                  },
+                  "Brand": {
+                    "type": "string"
+                  },
+                  "Installment": {
+                    "type": "string"
+                  },
+                  "ColorFamily": {
+                    "type": "string"
+                  },
+                  "StorageCapacity": {
+                    "type": "string"
+                  },
+                  "Images": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductImageDto"
+                    }
+                  },
+                  "Colors": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductColorDto"
+                    }
+                  },
+                  "StorageOptions": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductStorageOptionDto"
+                    }
+                  },
+                  "DeliveryOptions": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductDeliveryDto"
+                    }
+                  },
+                  "Warranty.Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Warranty.EasyReturn": {
+                    "type": "string"
+                  },
+                  "Warranty.BrandWarranty": {
+                    "type": "string"
+                  },
+                  "Seller.Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Seller.SellerName": {
+                    "type": "string"
+                  },
+                  "Seller.SellerType": {
+                    "type": "string"
+                  },
+                  "Seller.ChatAvailable": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "Title": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "CurrentPrice": {
+                  "style": "form"
+                },
+                "OriginalPrice": {
+                  "style": "form"
+                },
+                "Discount": {
+                  "style": "form"
+                },
+                "Rating": {
+                  "style": "form"
+                },
+                "Reviews": {
+                  "style": "form"
+                },
+                "Badge": {
+                  "style": "form"
+                },
+                "Brand": {
+                  "style": "form"
+                },
+                "Installment": {
+                  "style": "form"
+                },
+                "ColorFamily": {
+                  "style": "form"
+                },
+                "StorageCapacity": {
+                  "style": "form"
+                },
+                "Images": {
+                  "style": "form"
+                },
+                "Colors": {
+                  "style": "form"
+                },
+                "StorageOptions": {
+                  "style": "form"
+                },
+                "DeliveryOptions": {
+                  "style": "form"
+                },
+                "Warranty.Id": {
+                  "style": "form"
+                },
+                "Warranty.EasyReturn": {
+                  "style": "form"
+                },
+                "Warranty.BrandWarranty": {
+                  "style": "form"
+                },
+                "Seller.Id": {
+                  "style": "form"
+                },
+                "Seller.SellerName": {
+                  "style": "form"
+                },
+                "Seller.SellerType": {
+                  "style": "form"
+                },
+                "Seller.ChatAvailable": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/{id}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Title": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "CurrentPrice": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "OriginalPrice": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Discount": {
+                    "type": "string"
+                  },
+                  "Rating": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Reviews": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Badge": {
+                    "type": "string"
+                  },
+                  "Brand": {
+                    "type": "string"
+                  },
+                  "Installment": {
+                    "type": "string"
+                  },
+                  "ColorFamily": {
+                    "type": "string"
+                  },
+                  "StorageCapacity": {
+                    "type": "string"
+                  },
+                  "Images": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductImageDto"
+                    }
+                  },
+                  "Colors": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductColorDto"
+                    }
+                  },
+                  "StorageOptions": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductStorageOptionDto"
+                    }
+                  },
+                  "DeliveryOptions": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProductDeliveryDto"
+                    }
+                  },
+                  "Warranty.Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Warranty.EasyReturn": {
+                    "type": "string"
+                  },
+                  "Warranty.BrandWarranty": {
+                    "type": "string"
+                  },
+                  "Seller.Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Seller.SellerName": {
+                    "type": "string"
+                  },
+                  "Seller.SellerType": {
+                    "type": "string"
+                  },
+                  "Seller.ChatAvailable": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "Title": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "CurrentPrice": {
+                  "style": "form"
+                },
+                "OriginalPrice": {
+                  "style": "form"
+                },
+                "Discount": {
+                  "style": "form"
+                },
+                "Rating": {
+                  "style": "form"
+                },
+                "Reviews": {
+                  "style": "form"
+                },
+                "Badge": {
+                  "style": "form"
+                },
+                "Brand": {
+                  "style": "form"
+                },
+                "Installment": {
+                  "style": "form"
+                },
+                "ColorFamily": {
+                  "style": "form"
+                },
+                "StorageCapacity": {
+                  "style": "form"
+                },
+                "Images": {
+                  "style": "form"
+                },
+                "Colors": {
+                  "style": "form"
+                },
+                "StorageOptions": {
+                  "style": "form"
+                },
+                "DeliveryOptions": {
+                  "style": "form"
+                },
+                "Warranty.Id": {
+                  "style": "form"
+                },
+                "Warranty.EasyReturn": {
+                  "style": "form"
+                },
+                "Warranty.BrandWarranty": {
+                  "style": "form"
+                },
+                "Seller.Id": {
+                  "style": "form"
+                },
+                "Seller.SellerName": {
+                  "style": "form"
+                },
+                "Seller.SellerType": {
+                  "style": "form"
+                },
+                "Seller.ChatAvailable": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/image/{fileName}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/search": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Users/register": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductColorDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "colorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "colorCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductDeliveryDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "standardDeliveryText": {
+            "type": "string",
+            "nullable": true
+          },
+          "standardDeliveryTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "standardDeliveryPrice": {
+            "type": "string",
+            "nullable": true
+          },
+          "cashOnDelivery": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "originalPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "discount": {
+            "type": "string",
+            "nullable": true
+          },
+          "rating": {
+            "type": "number",
+            "format": "double"
+          },
+          "reviews": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "badge": {
+            "type": "string",
+            "nullable": true
+          },
+          "brand": {
+            "type": "string",
+            "nullable": true
+          },
+          "installment": {
+            "type": "string",
+            "nullable": true
+          },
+          "colorFamily": {
+            "type": "string",
+            "nullable": true
+          },
+          "storageCapacity": {
+            "type": "string",
+            "nullable": true
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductImageDto"
+            },
+            "nullable": true
+          },
+          "colors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductColorDto"
+            },
+            "nullable": true
+          },
+          "storageOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductStorageOptionDto"
+            },
+            "nullable": true
+          },
+          "deliveryOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductDeliveryDto"
+            },
+            "nullable": true
+          },
+          "warranty": {
+            "$ref": "#/components/schemas/ProductWarrantyDto"
+          },
+          "seller": {
+            "$ref": "#/components/schemas/ProductSellerDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductImageDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "file": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductSellerDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sellerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sellerType": {
+            "type": "string",
+            "nullable": true
+          },
+          "chatAvailable": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductStorageOptionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "storageOption": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductWarrantyDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "easyReturn": {
+            "type": "string",
+            "nullable": true
+          },
+          "brandWarranty": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterRequest": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
