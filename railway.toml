@@ -1,6 +1,7 @@
 [build]
-builder = "Nixpacks"
-buildCommand = "bash start.sh"
+builder = "nixpacks"
+buildCommand = "dotnet restore && dotnet publish -c Release -o out"
+startCommand = "dotnet out/Daraz CloneAgain.dll"
 
-[start]
-cmd = "bash start.sh"
+[env]
+DOTNET_SDK_VERSION = "8.0"
