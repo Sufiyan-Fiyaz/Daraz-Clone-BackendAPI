@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Daraz CloneAgain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8df17b600b0d2bd2dc66ceb5f1b6dd95b71c8634")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e45e41b6c7b63b9f6aa15b65add61a484124eea9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Daraz CloneAgain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Daraz CloneAgain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
