@@ -170,10 +170,11 @@ D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\staticwebas
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\staticwebassets.build.json.cache
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\staticwebassets.development.json
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\Daraz Cl.4C57D0AA.Up2Date
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\Daraz CloneAgain.dll
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\refint\Daraz CloneAgain.dll
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\Daraz CloneAgain.pdb
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\Daraz CloneAgain.genruntimeconfig.cache
 D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\ref\Daraz CloneAgain.dll
+D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\Daraz CloneAgain.sourcelink.json
+D:\VS Project\Daraz-Clone-API-main\Daraz CloneAgain\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
